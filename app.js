@@ -13,6 +13,7 @@ app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 // Creates the endpoint for our webhook
 app.post('/webhook', (req, res) => {
 
+  console.out("WHAT THE FUCK ARE YOU DOING");
   let body = req.body;
 
   // Checks this is an event from a page subscription
@@ -42,6 +43,8 @@ app.post('/webhook', (req, res) => {
 
 // Adds support for GET requests to our webhook
 app.get('/webhook', (req, res) => {
+
+  console.log("GET OR WHAT?");
 
   // Your verify token. Should be a random string.
   let VERIFY_TOKEN = "123456"
