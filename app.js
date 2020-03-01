@@ -92,7 +92,7 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text) {
 
     // Create the payload for a basic text message
-    callZoplaAPI("Edinburgh", "eh165ay");
+    //callZoplaAPI("Edinburgh", "eh165ay");
     response = {
       "text": `Hello. Thanks for contacting me. I can help you with finding a property. To get started, could you give me a rough idea of your budget and/or the location you are looking for properties?`
 
