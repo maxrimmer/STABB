@@ -95,6 +95,18 @@ function handleMessage(sender_psid, received_message) {
       "text": `Hello. Thanks for contacting me. I can help you with finding a property.
       To get started, could you give me a rough idea of your budget and/or the location
       you are looking for properties?`
+
+      // !!Rough algorithm!! change as needed
+      //- send first message 
+      //-	Get budget if valid number is given
+      //-	Get location if valid location is given
+      //-	If neither detected, “Sorry, but I couldn’t recognise a budget or location. Could you tell me again?”
+      //
+      //“I found these properties that match: blabflaefaeblhfabefwlbweia.”
+      //“Would ya like more?”
+      //-	If yes, repeat
+      //-	If no “aight cool bye"
+
     }
   }
 
