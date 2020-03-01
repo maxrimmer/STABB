@@ -82,6 +82,14 @@ app.get('/webhook', (req, res) => {
   }
 });
 
+// Gets the urls of each property and returns them in a list
+function returnProperties (received_message, listing_count) {
+  var url;
+  for (var p = 0; p < listing_count; p++) {
+    url.push((received_message[p]).details_url);
+  }
+  return url;
+}
 
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
