@@ -100,7 +100,8 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text) {
 
     // Create the payload for a basic text message
-    var zooplaData = callZoplaAPI("Edinburgh", "eh165ay");
+    var zooplaData = callZooplaAPI("Edinburgh", "eh165ay");
+    var urls = returnProperties (zooplaData.listing, zooplaData.result_count);
 
     // !!Rough algorithm!! change as needed
     //- send first message
@@ -151,7 +152,7 @@ function callSendAPI(sender_psid, response) {
   });
 }
 
-function callZoplaAPI(location, postcode) {
+function callZooplaAPI(location, postcode) {
     const Http = new XMLHttpRequest();
     const url="http://api.zoopla.co.uk/api/v1/property_listings.js?postcode=" + postcode + "&area=" + location + "&api_key=" + ZOOPLA_API_TOKEN;
     Http.open("GET", url);
