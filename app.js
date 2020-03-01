@@ -92,7 +92,7 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text) {
 
     // Create the payload for a basic text message
-    callZoplaAPI("Edinburgh", "eh165ay");
+    var zooplaData = callZoplaAPI("Edinburgh", "eh165ay");
 
     // !!Rough algorithm!! change as needed
     //- send first message
@@ -150,7 +150,9 @@ function callZoplaAPI(location, postcode) {
     Http.send();
 
     Http.onreadystatechange=(e)=>{
-      console.log(Http.responseText);
+      var response = Http.responseText;
     }
+
+    return response;
 
 }
