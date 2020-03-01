@@ -92,7 +92,7 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text) {
 
     // Create the payload for a basic text message
-    //callZoplaAPI("Edinburgh", "eh165ay");
+    callZoplaAPI("Edinburgh", "eh165ay");
 
     // !!Rough algorithm!! change as needed
     //- send first message
@@ -145,12 +145,12 @@ function callSendAPI(sender_psid, response) {
 
 function callZoplaAPI(location, postcode) {
     const Http = new XMLHttpRequest();
-    const url="http://api.zoopla.co.uk/api/v1/property_listings.js?postcode=" + postcode + "&area=" + location + "&api_key" = ZOOPLA_API_TOKEN;
+    const url="http://api.zoopla.co.uk/api/v1/property_listings.js?postcode=" + postcode + "&area=" + location + "&api_key=" + ZOOPLA_API_TOKEN;
     Http.open("GET", url);
     Http.send();
 
     Http.onreadystatechange=(e)=>{
-      console.log(Http.responseText)
+      console.log(Http.responseText);
     }
 
 }
